@@ -8,10 +8,13 @@ A Deep Learning and Computer Vision project designed to automatically detect and
 
 Rice crops are frequently affected by foliar diseases that reduce yield and grain quality. This project performs end-to-end Exploratory Data Analysis (EDA), image preprocessing, data augmentation, and deep learning model experimentation using **Custom CNN** and **Transfer Learning (MobileNetV2)** within a single reproducible Jupyter Notebook.
 
-### 🎯 Disease Classes
-1. **Bacterial Leaf Blight** (40 images)
-2. **Brown Spot** (40 images)
-3. **Leaf Smut** (39 images)
+### 📂 Dataset Information
+* **Download Dataset:** https://d3ilbtxij3aepc.cloudfront.net/projects/CDS-Capstone-Projects/PRCP-1001-RiceLeaf.zip
+* **Total Valid Images:** 119 RGB images (standardized to `224 × 224` pixels)
+* **Disease Classes:**
+  1. **Bacterial Leaf Blight** (40 images)
+  2. **Brown Spot** (40 images)
+  3. **Leaf Smut** (39 images)
 
 ---
 
@@ -64,11 +67,12 @@ The **Fine-Tuned MobileNetV2** (`rice_leaf_mobilenet_model.keras`) was selected 
 
 2. **Install required dependencies:**
    ```bash
-   pip install -r requirements.txt
+   pip install numpy pandas matplotlib seaborn opencv-python pillow tensorflow scikit-learn
    ```
 
-3. **Run the Jupyter Notebook:**
-   Open the `.ipynb` file in Jupyter Notebook or VS Code and run all cells sequentially.
+3. **Download the Dataset & Run:**
+   * Download and extract the dataset from the link above.
+   * Open `RiceLeaf disease detection.ipynb` in Jupyter Notebook or VS Code and run all cells sequentially.
 
 ---
 
@@ -77,5 +81,3 @@ The **Fine-Tuned MobileNetV2** (`rice_leaf_mobilenet_model.keras`) was selected 
 * Add more disease categories (*Rice Blast*, *Sheath Blight*, and *Healthy Leaves*).
 * Deploy the model via **Streamlit** or **TensorFlow Lite** for mobile field diagnosis.
 * Integrate **Grad-CAM** visual explanations to highlight infected leaf regions.
-# PRCP-1001-Rice-Leaf-Disease-Detection
-Deep Learning-based Rice Leaf Disease Classification using Custom CNN and Fine-Tuned MobileNetV2 (87.50% Test Accuracy).
